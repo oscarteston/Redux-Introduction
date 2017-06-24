@@ -1,8 +1,9 @@
 import { createStore } from 'redux';
-import videosReducer from './reducers/videos';
+import reducer from './reducers/reducer';
 import { addVideo } from './actions/actions';
+import { toogleSelected } from './actions/actions';
 
-let store = createStore(videosReducer);
+let store = createStore(reducer);
 
 // Mostramos el estado inicial
 console.log(store.getState());
@@ -22,6 +23,14 @@ store.dispatch(addVideo(
 ));
 
 store.dispatch(addVideo(
+    {
+        "videoId": "c5xTPPFe1a0",
+        "title": "Accedo Tech Event -  Dynamic UI",
+        "description": "Alex Kubarev at the Accedo Tech Event in Stockholm, on how we change the UI for +10M devices. Music by Springtide - CC license."
+    }
+));
+
+store.dispatch(toogleSelected(
     {
         "videoId": "c5xTPPFe1a0",
         "title": "Accedo Tech Event -  Dynamic UI",

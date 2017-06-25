@@ -4,7 +4,7 @@ import YTSearch from 'youtube-api-search';
 const API_KEY = 'AIzaSyDDNVSYCxyCWsOctzIcLCNYd-DRRAW7vrg';
 
 import SearchBar from '../containers/search_bar';
-import VideoList from './video_list';
+import VideoListConainer from '../containers/video_list_container';
 import VideoDetail from './video_detail';
 
 export default class App extends Component {
@@ -18,7 +18,7 @@ export default class App extends Component {
              <div>
                 <SearchBar/>
                 <VideoDetail/>
-                <VideoList/>
+                <VideoListConainer/>
             </div>
         )
     }

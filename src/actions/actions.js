@@ -1,20 +1,24 @@
-export const ADD_VIDEO = 'ADD_VIDEO';
-export const TOOGLE_SELECTED = 'TOOGLE_SELECTED';
+export const UPDATE_SEARCH_TEXT = 'UPDATE_SEARCH_TEXT';
+export const UPDATE_VIDEOS = 'UPDATE_VIDEOS';
+export const UPDATE_SELECTED_VIDEO = 'UPDATE_SELECTED_VIDEO';
 
-export function addVideo(video) {
-    //addVideo is an ActionCreator, it needs to return an action
-    //an object with a type propertly
+export function updateSearchText(text) {
     return {
-        type: ADD_VIDEO,
-        payload: video
+        type: UPDATE_SEARCH_TEXT,
+        text: text
+    }
+};
+
+export function updateVideos(videos) {
+    return {
+        type: UPDATE_VIDEOS,
+        videos: videos
     }
 };
 
 export function toogleSelected(video) {
-    //addVideo is an ActionCreator, it needs to return an action
-    //an object with a type propertly
     return {
-        type: TOOGLE_SELECTED,
-        payload: video
+        type: UPDATE_SELECTED_VIDEO,
+        selectedVideo: video
     }
 };

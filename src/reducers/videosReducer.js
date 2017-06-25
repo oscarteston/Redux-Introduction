@@ -1,11 +1,9 @@
-import { ADD_VIDEO } from '../actions/actions'
+import { UPDATE_VIDEOS } from '../actions/actions'
 
 export default (state = [], action) => {
     switch (action.type) {
-        case ADD_VIDEO:
-            //return state.push(action.payload.data);
-            //return state.concat(action.payload.data);
-            return [action.payload, ...state];
+        case UPDATE_VIDEOS:
+            return [action.videos, ...state];
         default:
             return state;
     } 

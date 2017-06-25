@@ -3,7 +3,7 @@ import _ from 'lodash';
 import YTSearch from 'youtube-api-search';
 const API_KEY = 'AIzaSyDDNVSYCxyCWsOctzIcLCNYd-DRRAW7vrg';
 
-import SearchBar from './search_bar';
+import SearchBar from '../containers/search_bar';
 import VideoList from './video_list';
 import VideoDetail from './video_detail';
 

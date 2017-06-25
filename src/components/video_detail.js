@@ -2,7 +2,7 @@ import React from 'react';
 
 const VideoDetail = ({video}) => {
     //use ({video}) is the same as using (props) and props.video
-    if(!video) {
+    if(!video || Object.keys(video).length === 0) {
         return <div>Loading...</div>
     }
     const videoId = video.id.videoId;

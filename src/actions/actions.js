@@ -32,7 +32,7 @@ export function removeLastVideo() {
 };
 
 
-export function toogleSelected(video) {
+export function UpdateSelected(video) {
     return {
         type: UPDATE_SELECTED_VIDEO,
         selectedVideo: video

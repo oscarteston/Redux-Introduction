@@ -1,12 +1,12 @@
 import React from 'react';
-import VideoListItem from './video_list_item';
+import VideoListItemContainer from '../containers/video_list_item_container';
 import video from '../mocks/video';
 
 const VideoList = (props) => {
 
     const videoItems = props.videos.map((video) => {
         return (
-            <VideoListItem
+            <VideoListItemContainer
                 video={video}/>
         )
     });

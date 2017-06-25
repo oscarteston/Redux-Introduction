@@ -5,7 +5,7 @@ const API_KEY = 'AIzaSyDDNVSYCxyCWsOctzIcLCNYd-DRRAW7vrg';
 
 import SearchBar from '../containers/search_bar';
 import VideoListConainer from '../containers/video_list_container';
-import VideoDetail from './video_detail';
+import VideoDetailContainer from '../containers/video_detail_container';
 
 export default class App extends Component {
 
@@ -17,7 +17,7 @@ export default class App extends Component {
         return (
              <div>
                 <SearchBar/>
-                <VideoDetail/>
+                <VideoDetailContainer/>
                 <VideoListConainer/>
             </div>
         )

@@ -13,9 +13,5 @@ function mapStateToProps (state) {
     };
 }
 
-function mapDispatchToProps (dispatch) {
-    return bindActionCreators({ updateVideos }, dispatch);
-}
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(VideoList);
+export default connect(mapStateToProps)(VideoList);

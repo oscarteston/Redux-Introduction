@@ -2,11 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+import promiseMiddleware from 'redux-promise';
+import {createLogger} from 'redux-logger';
 
 import appReducer from './reducers/appReducer';
 import App from './components/app';
 
-const store = createStore(appReducer);
+const loggerMiddleware = createLogger();
+
+const store = createStore(
+    appReducer,
+    applyMiddleware(
+        promiseMiddleware, // nos permite despachar funciones
+        loggerMiddleware // registra las acciones
+    )
+)
 window.store = store;
 ReactDOM.render(
     <Provider store={store}>

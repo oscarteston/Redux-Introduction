@@ -9,7 +9,7 @@ const removeLastVideo = (videos) => {
 export default (state = [], action) => {
     switch (action.type) {
         case UPDATE_VIDEOS:
-            return [action.videos];
+            return [...action.payload.data.items];
 
         default:
             return state;

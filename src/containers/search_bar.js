@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { updateSearchText } from '../actions/actions';
+import { updateVideos } from '../actions/actions';
 
 class searchBar extends Component {
     constructor(props) {
@@ -13,6 +14,7 @@ class searchBar extends Component {
     onInputChange(event) {
         let searchText = event.target.value;
         this.props.updateSearchText(searchText);
+        this.props.updateVideos(searchText);
     }
 
     render() {
@@ -36,7 +38,7 @@ function mapStateToProps (state) {
 function mapDispatchToProps (dispatch) {
     //Hace que la acción updateSearchText bindeada al dispatch este disponible desde las propiedades del componente.
     //this.props.updateSearchText() === store.dispatch(updateSearchText)
-    return bindActionCreators({ updateSearchText }, dispatch);
+    return bindActionCreators({ updateSearchText, updateVideos }, dispatch);
 }
 
 

@@ -18,20 +18,6 @@ export function updateVideos(videos) {
     }
 };
 
-export function addVideo(video) {
-    return {
-        type: ADD_VIDEO,
-        video: video
-    }
-};
-
-export function removeLastVideo() {
-    return {
-        type: REMOVE_LAST_VIDEO
-    }
-};
-
-
 export function UpdateSelected(video) {
     return {
         type: UPDATE_SELECTED_VIDEO,

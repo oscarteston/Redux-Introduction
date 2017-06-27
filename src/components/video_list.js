@@ -14,8 +14,6 @@ const VideoList = (props) => {
     return (
         <div>
             <div className="col-md-4"> 
-                <button className='btn btn-secondary' onClick={() => props.addVideo(video) }> Añadir Video </button>
-                <button className='btn btn-secondary' onClick={() => props.removeLastVideo() }> Borrar Video </button>
                 <ul className="list-group">
                     {videoItems}
                 </ul>

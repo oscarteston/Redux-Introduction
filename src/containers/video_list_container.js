@@ -1,8 +1,7 @@
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { addVideo } from '../actions/actions';
-import { removeLastVideo } from '../actions/actions';
+import { updateVideos } from '../actions/actions';
 
 
 import VideoList from '../components/video_list';
@@ -15,7 +14,7 @@ function mapStateToProps (state) {
 }
 
 function mapDispatchToProps (dispatch) {
-    return bindActionCreators({ addVideo, removeLastVideo }, dispatch);
+    return bindActionCreators({ updateVideos }, dispatch);
 }
 
 

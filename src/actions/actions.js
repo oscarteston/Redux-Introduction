@@ -20,9 +20,14 @@ export function updateVideos(searchText) {
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&key=${API_KEY}&type=video&q=${searchText}`;
     const request = axios.get(url);
 
-    return {
-        type: UPDATE_VIDEOS,
-        payload: request
+    return (dispatch, getState) => {
+        axios.get(url)
+            .then((response)=>{
+                dispatch({
+                    type: UPDATE_VIDEOS,
+                    payload: response.data.items 
+                })
+            })
     }
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import promiseMiddleware from 'redux-promise';
+import thunkMiddleware from 'redux-thunk';
 import {createLogger} from 'redux-logger';
 
 import appReducer from './reducers/appReducer';
@@ -13,7 +13,7 @@ const loggerMiddleware = createLogger();
 const store = createStore(
     appReducer,
     applyMiddleware(
-        promiseMiddleware, // nos permite despachar funciones
+        thunkMiddleware, // nos permite despachar funciones
         loggerMiddleware // registra las acciones
     )
 )
